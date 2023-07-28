@@ -1,0 +1,2 @@
+pyuseragents==1.0.5
+requests==2.31.0
