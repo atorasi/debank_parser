@@ -8,12 +8,12 @@ from config import NEED_TO_SAVE, POST_NUMBER, LAST_POST_NUMBER, TOKEN, SEND_TO, 
 def change_proxy_ip():
     r = requests.get(LINK_TO_CHANGE_PROXY)
 
+
 def send_telegram_message(token: str, chat_id :int, text: str):
     url = f'https://api.telegram.org/bot{token}/sendMessage'
-
     data = {'chat_id': chat_id, 'text': text}
-
     r = requests.post(url, data=data)
+
 
 def main(post_number: int) -> int:
     headers = {
@@ -54,7 +54,6 @@ def main(post_number: int) -> int:
                 
     print(f'No Draw | {POST_NUMBER}')        
     return 1 
-    
     
 
 if __name__ == '__main__':
